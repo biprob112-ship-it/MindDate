@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <title>MindDates — Mental Wellness Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="brand">
+        <div class="brand-mark">🗓️</div>
+        <div><h1>MindDates</h1><p>A little space to check in with yourself</p></div>
+      </div>
+      <div class="privacy">🔒 Saved on this device</div>
+    </header>
+
+    <section class="intro">
+      <div class="eyebrow">Your mental wellness calendar</div>
+      <h2>Your mind. Your moods. Your days.</h2>
+      <p>Take a moment for yourself.</p>
+    </section>
+
+    <div class="layout">
+      <section class="card">
+        <div class="calendar-top">
+          <h3 id="monthLabel">Month Year</h3>
+          <div class="month-nav">
+            <button class="icon-btn" id="prevMonth" aria-label="Previous month">‹</button>
+            <button class="icon-btn" id="nextMonth" aria-label="Next month">›</button>
+          </div>
+        </div>
+        <div class="weekdays">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div class="calendar-grid" id="calendarGrid" aria-label="Mood calendar"></div>
+        <div class="calendar-foot">
+          <span>Choose today or a past date to add or revisit a check-in.</span>
+        </div>
+      </section>
+
+      <div class="side">
+        <section class="card">
+          <h3 class="section-title">Today's check-in</h3>
+          <p class="sub">How are you feeling today?</p>
+          <div class="chosen-date" id="chosenDate"></div>
+          <div class="moods" id="moodChoices">
+            <button class="mood" data-mood="great" aria-label="Great"><span>😄</span><small>Great</small></button>
+            <button class="mood" data-mood="good" aria-label="Good"><span>🙂</span><small>Good</small></button>
+            <button class="mood" data-mood="okay" aria-label="Okay"><span>😐</span><small>Okay</small></button>
+            <button class="mood" data-mood="low" aria-label="Low"><span>😔</span><small>Low</small></button>
+            <button class="mood" data-mood="rough" aria-label="Rough"><span>😣</span><small>Rough</small></button>
+          </div>
+          <label for="note">A little note (optional)</label>
+          <textarea id="note" maxlength="280" placeholder="What made you feel this way?"></textarea>
+          <div class="prompt" id="prompt">✦ Gentle prompt: What is one small thing that helped you today?</div>
+          <div class="actions">
+            <button class="primary" id="saveEntry">Save check-in</button>
+            <button class="secondary" id="clearEntry">Clear</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3 class="section-title">Your little patterns</h3>
+          <p class="sub">A look at the entries you've saved this month.</p>
+          <div class="stats-grid">
+            <div class="stat"><strong id="loggedCount">0</strong><span>days checked in</span></div>
+            <div class="stat"><strong id="topMood">—</strong><span>most common mood</span></div>
+          </div>
+          <div class="insight" id="insight">Your mood history will appear here as you check in. Every entry helps you learn about yourself.</div>
+          <div class="history" id="recentHistory"></div>
+        </section>
+      </div>
+    </div>
+    <footer>MindDates · Your dates stay in this browser.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

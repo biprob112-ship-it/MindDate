@@ -1,6 +1,5 @@
 
 # 🌿 MindDates — Mental Wellness Calendar
-
 ## 💭 About the Project
 MindDates is a simple mental wellness calendar that helps you track your daily moods and record it in one place.
 
